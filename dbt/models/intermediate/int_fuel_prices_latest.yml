@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: int_fuel_prices_latest
+    description: Latest available fuel prices per station and fuel type using the snapshot table.
+    columns:
+      - name: region
+        description: Name of the region.
+      - name: state
+        description: Name of the state.
+      - name: station_name
+        description: Name of the fuel station.
+        tests:
+          - not_null
+      - name: fuel_type
+        description: Type of fuel (e.g., E10, U91, Diesel).
+        tests:
+          - not_null
+      - name: price
+        description: Price of the fuel in cents per litre.
+      - name: updated_at
+        description: Timestamp when the fuel price was last updated.
+

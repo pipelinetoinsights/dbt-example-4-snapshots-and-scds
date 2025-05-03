@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: stg_fuel_prices
+    description: Raw staging table extracted from the fuel price API.
+    columns:
+      - name: region
+        description: Region grouping of the fuel station.
+      - name: suburb
+        description: Suburb where the station is located.
+      - name: state
+        description: State of the fuel station.
+      - name: type
+        description: Type of fuel (e.g., U91, E10, Diesel).
+      - name: price
+        description: Fuel price in cents per litre.
+        tests:
+          - not_null
+      - name: name
+        description: Name of the station.
+      - name: postcode
+        description: Postcode of the station.
+      - name: lat
+        description: Latitude of the station.
+      - name: lng
+        description: Longitude of the station.
+      - name: updated_at
+        description: Timestamp when the price was last updated.
+        tests:
+          - not_null

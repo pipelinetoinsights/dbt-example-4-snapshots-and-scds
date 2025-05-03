@@ -1,0 +1,9 @@
+snapshots:
+  - name: snapshot_fuel_prices
+    relation: ref('stg_fuel_prices')
+    config:
+      unique_key: ['station_name', 'fuel_type', 'postcode']
+      strategy: check
+      check_cols:
+        - price
+        

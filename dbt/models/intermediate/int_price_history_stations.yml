@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: int_price_history_stations
+    description: Historical fuel prices per fuel station and fuel type over time.
+    columns:
+      - name: station_name
+        description: Name of the fuel station.
+        tests:
+          - not_null
+      - name: fuel_type
+        description: Fuel type at the station.
+        tests:
+          - not_null
+      - name: postcode
+        description: Postcode of the station.
+      - name: state
+        description: State of the fuel station.
+      - name: price
+        description: Price at the given timestamp.
+      - name: updated_at
+        description: Timestamp of the price update.
+        tests:
+          - not_null

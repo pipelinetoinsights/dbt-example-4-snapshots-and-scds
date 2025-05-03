@@ -1,0 +1,7 @@
+fuel_price_project:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: /path/to/your/fuel_price_pipeline.duckdb
+      threads: 1

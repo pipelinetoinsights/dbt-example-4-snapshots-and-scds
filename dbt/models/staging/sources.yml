@@ -1,0 +1,30 @@
+version: 2
+
+sources:
+  - name: raw_data
+    description: Raw dataset ingested from the 11-Seven fuel price API and stored in DuckDB.
+    schema: raw_data
+    tables:
+      - name: fuel_prices
+        description: Raw fuel price data including region, fuel type, and price details for each station.
+        columns:
+          - name: region
+            description: Region grouping of the station.
+          - name: suburb
+            description: Suburb where the station is located.
+          - name: state
+            description: State of the station.
+          - name: type
+            description: Type of fuel sold.
+          - name: price
+            description: Fuel price in cents per litre.
+          - name: name
+            description: Name of the fuel station.
+          - name: postcode
+            description: Postcode for the station location.
+          - name: lat
+            description: Latitude coordinate.
+          - name: lng
+            description: Longitude coordinate.
+          - name: updated_at
+            description: Timestamp when the record was last updated in the API.

@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: marts_fuel_price_volatility
+    description: Fuel price volatility for each station and fuel type
+    columns:
+      - name: station nmae
+        description: Name of the fuel station.
+      - name: fuel_type
+        description: Fuel type at the station.
+      - name: state
+        description: State of the fuel station.
+      - name: price_stddev
+        description: Standard deviation of the fuel price for each fuel station and fuel type
+      - name: num_entries
+        description: Number of fuel price values we have for each fuel station and fuel type

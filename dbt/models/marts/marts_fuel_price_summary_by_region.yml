@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: marts_fuel_price_summary_by_region
+    description: Historical fuel price summary for each state
+    columns:
+      - name: state
+        description: State of the fuel station.
+      - name: fuel_type
+        description: Fuel type at the station.
+      - name: avg_price
+        description: Average Price at the given state for each fuel type.
+      - name: min_price
+        description: Minimum Price at the given state for each fuel type.
+      - name: max_price
+        description: Maximum Price at the given state for each fuel type.
