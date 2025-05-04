@@ -10,16 +10,22 @@ models:
         description: Suburb where the station is located.
       - name: state
         description: State of the fuel station.
-      - name: type
+      - name: fuel_type
         description: Type of fuel (e.g., U91, E10, Diesel).
+        tests:
+          - not_null
       - name: price
         description: Fuel price in cents per litre.
         tests:
           - not_null
-      - name: name
+      - name: station_name
         description: Name of the station.
+        tests:
+          - not_null
       - name: postcode
         description: Postcode of the station.
+        tests:
+          - not_null
       - name: lat
         description: Latitude of the station.
       - name: lng
